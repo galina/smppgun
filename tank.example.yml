@@ -1,0 +1,29 @@
+phantom:
+  enabled: false
+pandora:
+  package: yandextank.plugins.Pandora
+  enabled: true
+  pandora_cmd: ./smppgun
+  config_file: ./load.example.yml
+autostop:
+  autostop:
+    - time(100ms,10s)
+console:
+  enabled: true
+telegraf:
+  enabled: true
+  default_target: localhost
+overload:
+  enabled: false
+  package: yandextank.plugins.DataUploader
+  token_file: ./tmp/token.txt
+influx:
+  enabled: true
+  address: 'tele2-sms-proxy-auto-influxdb.staging.funbox.io'
+  port: 80
+  database: tank
+  tank_tag: 'smpp_tank'
+  prefix_measurement: 'smpp_front_'
+  labeled: true
+  username: 'influxdb'
+  password: 'influxdb'

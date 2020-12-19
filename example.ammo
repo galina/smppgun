@@ -1,0 +1,5 @@
+{"tag": "sm", "text": "Hello Hello Hello", "src": "src_number1", "dst": "791223456789", "enc": "latin1"}
+{"tag": "sm", "text": "Вы устанавливаете PIN", "src": "src_number2", "dst": "791223456780", "enc": "ucs2"}
+{"tag": "sm", "text": "short message", "src": "src_number2", "dst": "791223456780", "enc": "default"}
+{"tag": "multipart", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat nisl enim, vel finibus neque aliquet sit amet. ✓", "src": "src_number1", "dst": "791223456780", "enc": "ucs2"}
+{"tag": "sm", "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consequat nisl enim, vel finibus neque aliquet sit amet. ✓", "src": "src_number1", "dst": "791223456780", "enc": "latin1"}

@@ -1,0 +1,9 @@
+/smppgun
+/server
+
+/logs
+/tmp
+tank_errors.log
+load.yml
+tank.yml
+smpp.ammo

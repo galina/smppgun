@@ -1,0 +1,43 @@
+pools:
+  - id: SMPP
+    gun:
+        type: smpp
+        target: 127.0.0.1:15000
+        systemId: test
+        password: test
+        deliveryReceipt: 1
+        esme:
+          respTimeout: 1s
+          enquireLink: 60s
+          # Default: EnquireLinkTimeout = 3 * EnquireLink.
+          enquireLinkTimeout: 0
+          bindInterval: 1s
+          windowSize: 0
+    ammo:
+        type: smpp_provider
+        source:
+            type: file
+            path: ./example.ammo
+    result:
+        type: phout
+        destination: /tmp/phout.log
+    rps: {duration: 120s, type: const, ops: 10}
+    # rps: {duration: 480s, type: line, from: 100, to: 4000}
+    startup:
+        type: once
+        times: 10
+
+log:
+  level: info
+
+# stats at http://localhost:8089/debug/vars
+# monitoring:
+#   expvar:                            # gun statistics HTTP server
+#     enabled: true
+#     port: 8089
+#   cpuprofile:
+#     enabled: true
+#     file: "./tmp/cpuprofile.log"
+#   memprofile:
+#     enabled: true
+#     file: "./tmp/memprofile.log"
